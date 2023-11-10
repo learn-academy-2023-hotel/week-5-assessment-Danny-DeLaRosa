@@ -4,7 +4,7 @@ The LEARN program focuses on readying our students for a career in technology. T
 
 ### LinkedIn
 
-Your LinkedIn url:
+Your LinkedIn url: 
 
 Check the boxes below to certify that you have completed the following items on LinkedIn:
 
