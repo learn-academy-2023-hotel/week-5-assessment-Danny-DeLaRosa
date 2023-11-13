@@ -83,10 +83,10 @@ const codedMessage = (string) => {
 
 // a) Create a test with expect statements using the variable provided.
 describe ("fullHouse", () => {
-        it ("takes in an array of 5 numbers and determines whether or not the array is a 'full house'", () => {   expect(fullHouse(hand1)).toEqual("true")
-            expect(fullHouse(hand2)).toEqual("false")
-            expect(fullHouse(hand3)).toEqual("false")
-            expect(fullHouse(hand4)).toEqual("true")
+        it ("takes in an array of 5 numbers and determines whether or not the array is a 'full house'", () => {   expect(fullHouse(hand1)).toEqual(true)
+            expect(fullHouse(hand2)).toEqual(false)
+            expect(fullHouse(hand3)).toEqual(false)
+            expect(fullHouse(hand4)).toEqual(true)
         })
     })
 
@@ -102,3 +102,13 @@ const hand4 = [7, 2, 7, 2, 7]
 // b) Create the function that makes the test pass.
 
 // Pseudo code:
+// create a function that takes in an array
+const fullHouse = (array) => {
+    // sort the array in numerical order 
+    array.sort()
+    // create two variables that sees if that array is a full house or not.
+    let patternOne = array[0] === array[1] && array[1] !== array[2] && array[2] === array[3] && array[3] === array[4]
+    let patternTwo = array[0] === array[1] && array[1] === array[2] && array[2] !== array[3] && array[3] === array[4]
+    // return pattern one or two in case the numbers are arraged differently.
+    return patternOne || patternTwo
+}
